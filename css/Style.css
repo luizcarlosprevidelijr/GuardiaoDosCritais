@@ -1,0 +1,441 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+/* MENU */
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+/* LINKS */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+
+  position: relative;
+  transition: 0.3s;
+}
+
+/* HOVER + EFEITO */
+nav a:hover {
+  color: #00c3ff;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #00c3ff, 0 0 20px #00c3ff;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 0%;
+  height: 2px;
+  background: #00c3ff;
+
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* BOTÃO TEMA */
+.theme-btn {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+
+  background: linear-gradient(45deg, #00c3ff, #0077ff);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+  box-shadow: 0 0 10px #00c3ff;
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ================= MAIN ================= */
+main {
+  padding-top: 80px;
+  padding-bottom: 150px;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    url("../imgs/BGFundoEscuro.png");
+
+  background-size: cover;
+  background-position: center;
+
+  color: #8df0ff;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* CONTEÚDO CENTRAL */
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+/* TÍTULO */
+main h1 {
+  font-size: 110px;
+  font-family: "VT323", monospace;
+
+  background: linear-gradient(90deg, #00ffff, #00ff88);
+  background-clip: text;
+  color: transparent;
+
+  animation: brilho 3s infinite;
+}
+
+/* TEXTO */
+main p {
+  font-size: 20px;
+  margin: 10px 0 20px;
+  color: white;
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* BOTÃO */
+.botao {
+  padding: 15px 30px;
+  font-size: 20px;
+
+  color: white;
+  text-decoration: none;
+
+  background: linear-gradient(45deg, #00c3ff, #0077ff);
+  border-radius: 25px;
+
+  box-shadow: 0 0 10px #00c3ff, 0 0 20px #0077ff;
+
+  transition: 0.3s;
+}
+
+.botao-jogar:hover {
+  transform: scale(1.1);
+}
+
+/* ================= EFEITOS ================= */
+.efeitos {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* CRISTAIS */
+.cristais {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cristais span {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+
+  background: linear-gradient(#00ffff, transparent);
+  animation: cair linear infinite;
+}
+
+/* POSIÇÕES */
+.cristais span:nth-child(1) {
+  left: 10%;
+  animation-duration: 4s;
+}
+
+.cristais span:nth-child(2) {
+  left: 20%;
+  animation-duration: 6s;
+}
+
+.cristais span:nth-child(3) {
+  left: 30%;
+  animation-duration: 5s;
+}
+
+.cristais span:nth-child(4) {
+  left: 40%;
+  animation-duration: 7s;
+}
+
+.cristais span:nth-child(5) {
+  left: 50%;
+  animation-duration: 4.5s;
+}
+
+.cristais span:nth-child(6) {
+  left: 60%;
+  animation-duration: 6.5s;
+}
+
+.cristais span:nth-child(7) {
+  left: 70%;
+  animation-duration: 5.5s;
+}
+
+.cristais span:nth-child(8) {
+  left: 80%;
+  animation-duration: 7s;
+}
+
+.cristais span:nth-child(9) {
+  left: 90%;
+  animation-duration: 4s;
+}
+
+.cristais span:nth-child(10) {
+  left: 95%;
+  animation-duration: 6s;
+}
+
+/* ================= ANIMAÇÕES ================= */
+@keyframes cair {
+  0% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes brilho {
+  0% {
+    text-shadow: 0 0 5px #00ffff;
+  }
+
+  50% {
+    text-shadow: 0 0 25px #00ffff;
+  }
+
+  100% {
+    text-shadow: 0 0 5px #00ffff;
+  }
+}
+
+/* ================= FOOTER ================= */
+footer {
+  width: 100%;
+  z-index: 100;
+
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0, 255, 255, 0.3);
+
+  padding: 30px 20px;
+  text-align: center;
+
+  color: #8df0ff;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* LINKS FOOTER */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+
+  position: relative;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00c3ff;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #00c3ff, 0 0 20px #00c3ff;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 0%;
+  height: 2px;
+  background: #00c3ff;
+
+  transition: 0.3s;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-info {
+  font-size: 14px;
+  color: rgba(141, 240, 255, 0.7);
+}
+
+/* ================= PÁGINAS ================= */
+.pagina-conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.pagina-conteudo h1 {
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+.pagina-conteudo p {
+  max-width: 600px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* GAME */
+.game-container {
+  width: 95vw;
+  margin: 20px auto;
+  aspect-ratio: 16 / 9;
+}
+
+.game-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* ================= LIGHT MODE ================= */
+.light-mode header {
+  background: #70f1ffae;
+
+}
+
+.light-mode main {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.21)),
+    url("../imgs/TelaInicial.png");
+}
+
+.light-mode main p {
+  color: #70f1ff;
+}
+
+.light-mode nav a {
+  color: #000;
+}
+
+.light-mode footer {
+  background: #70f1ff6e;
+  
+}
+
+.light-mode footer p {
+  color: #000;
+}
+
+.light-mode .footer-links a {
+  color: #000;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+  main h1 {
+    font-size: 60px;
+  }
+
+  main p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .footer-links {
+    gap: 15px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .theme-btn {
+    font-size: 9px;
+    padding: 6px 10px;
+    top: 10px;
+    right: 2px !important;
+  }
+
+  .emoji {
+    display: none;
+  }
+}
