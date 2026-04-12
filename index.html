@@ -1,46 +1,59 @@
 <!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guardião Dos Cristais</title>
+    <link rel="stylesheet" href="css/Style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guardião Dos Cristais</title>
-  <link rel="stylesheet" href="css/Style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <div id="conteudo-sensivel">
+      <div id="header-placeholder"></div>
 
-<body>
-  <div id="conteudo-sensivel">
-    <div id="header-placeholder"></div>
-
-    <main>
-      <section id="início" class="inicio">
-        <div class="conteudo">
-          <h1>
-            Guardião <br />
-            Dos <br />
-            Cristais
-          </h1>
-          <p>Explore um mundo mágico e recupere os cristais perdidos</p>
-          <a href="pages/jogo.html" id="botaoJogar" class="botao">Jogar Agora</a>
-        </div>
-
-        <div class="efeitos">
-          <div class="cristais">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
+      <main>
+        <section id="início" class="inicio">
+          <div class="conteudo">
+            <h1>
+              Guardião <br />
+              Dos <br />
+              Cristais
+            </h1>
+            <p>Explore um mundo mágico e recupere os cristais perdidos</p>
+            <a href="pages/jogo.html" id="botaoJogar" class="botao"
+              >Jogar Agora</a
+            >
           </div>
-        </div>
-      </section>
-    </main>
 
-    <div id="footer-placeholder"></div>
+          <div>
+            <p>Digite seu nome:</p>
 
-    <script src="js/components.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/lancamento.js"></script>
-    <script src="../js/nome.js"></script>
-  </div>
-</body>
+            <input type="text" id="nome" placeholder="Seu nome aqui" />
+            <br>
+            <button onclick="mostrarMensagem()">Enviar</button>
 
+            <p id="mensagem"></p>
+          </div>
+
+          <div class="efeitos">
+            <div class="cristais">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div id="footer-placeholder"></div>
+
+      <script src="js/components.js"></script>
+      <script src="js/theme.js"></script>
+      <script src="js/lancamento.js"></script>
+      <script src="js/nomeSaudacao.js"></script>
+    </div>
+  </body>
 </html>

@@ -1,41 +1,50 @@
 <!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo - Guardião Dos Cristais</title>
+    <link rel="stylesheet" href="../css/Style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jogo - Guardião Dos Cristais</title>
-  <link rel="stylesheet" href="../css/Style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <div id="header-placeholder"></div>
 
-<body>
-  <div id="header-placeholder"></div>
-
-  <main>
-    <section class="pagina-conteudo">
-      <div class="conteudo">
-        <h1>Jogo</h1>
-        <div class="game-container">
-          <iframe src="../jogo/index.html">
-          </iframe>
+    <main>
+      <section class="pagina-conteudo">
+        <div class="conteudo">
+          <h1>Jogo</h1>
+          <button class="botao" onclick="verificarIdade()">
+            Acessar conteúdo
+          </button>
+          <div id="areaJogo" class="game-container">
+            <iframe
+              src="../Guardião dos Cristais.html5/index.html"
+              title="Guardião dos Cristais"
+            >
+              Seu navegador não suporta iframes.
+            </iframe>
+          </div>
+          <a href="../index.html" class="botao">Voltar ao Início</a>
         </div>
-        <a href="../index.html" class="botao">Voltar ao Início</a>
-      </div>
 
-      <div class="efeitos">
-        <div class="cristais">
-          <span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span>
+        <div class="efeitos">
+          <div class="cristais">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
-  <script src="../js/components.js"></script>
-  <script src="../js/theme.js"></script>
-</body>
-
+    <script src="../js/components.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/Idade.js"></script>
+  </body>
 </html>

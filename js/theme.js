@@ -16,21 +16,3 @@ function trocarTema() {
     localStorage.setItem("tema", "dark");
   }
 }
-
-window.onload = function () {
-  const temaSalvo = localStorage.getItem("tema");
-
-  const emoji = document.querySelector(".emoji");
-  const texto = document.querySelector(".texto");
-
-  if (!emoji || !texto) return;
-
-  if (temaSalvo === "light") {
-    document.body.classList.add("light-mode");
-    emoji.textContent = "☀️";
-    texto.textContent = "Tema Claro";
-  } else {
-    emoji.textContent = "🌙";
-    texto.textContent = "Tema Escuro";
-  }
-};
