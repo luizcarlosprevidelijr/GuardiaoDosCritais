@@ -3,7 +3,7 @@ const desenvolvedor = "Lc";
 const genero = "Aventura";
 const objetivo = "Recuperar os cristais perdidos";
 const fase = "Floresta Mágica";
-const poder = "Cristais de Luz";
+const poder = "Magia de Luz";
 
 document.getElementById("titulo-site").innerText = nomeJogo;
 
