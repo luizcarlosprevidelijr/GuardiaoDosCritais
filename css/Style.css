@@ -133,7 +133,7 @@ main p {
   transition: 0.5s;
 }
 
-.botao-jogar:hover {
+.botao:hover {
   transform: scale(1.1);
 }
 
@@ -429,7 +429,7 @@ button:hover {
     0 0 30px #0077ff;
 }
 
-.info-jogo-extra {
+.info-jogo {
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 15px;
@@ -441,7 +441,6 @@ button:hover {
   box-sizing: border-box;
 }
 
-/*  responsivo  */
 @media (max-width: 768px) {
   main h1 {
     font-size: 60px;
@@ -484,10 +483,10 @@ button:hover {
   .emoji {
     display: none;
   }
-  .info-jogo-extra {
+  .info-jogo {
     width: 90%;
   }
-  
+
   .conteudo p {
     width: 90%;
   }
